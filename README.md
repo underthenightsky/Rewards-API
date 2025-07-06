@@ -63,7 +63,7 @@ $ npm run start:prod
 ## View API Documentation and Sample Requests and Responses
 <br> Hit URI/api  to view Swagger documnentation <br>
 
-#Postman Collection JSON
+## Postman Collection JSON
 Import this json file to run tests in postman directly 
 ```json
 {
@@ -131,8 +131,7 @@ Import this json file to run tests in postman directly
         "header": [{ "key": "Content-Type", "value": "application/json" }],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"userId\": \"12345678\",\n    \"pointsRedeemed\": \100\\n
-\"rewardType\": \"voucher\"\n }"
+          "raw": {"userId": "12345678","pointsRedeemed": 100,"rewardType": "voucher"}
         },
         "url": {
           "raw": "http://localhost:3000/rewards/redeem",
