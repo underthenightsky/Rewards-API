@@ -33,7 +33,7 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
-## View API Documentation and sample results 
+## View API Documentation and Sample Requests and Responses
 <br> Hit localhost:PORT/api  to view swagger documnentation <br>
 ## Run tests
 
