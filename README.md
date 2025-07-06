@@ -62,6 +62,91 @@ $ npm run start:prod
 ```
 ## View API Documentation and Sample Requests and Responses
 <br> Hit URI/api  to view Swagger documnentation <br>
+
+#Postman Collection JSON
+Import this json file to run tests in postman directly 
+```json
+{
+  "info": {
+    "name": "Rewards API",
+    "description": "Postman collection for Rewards API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Reward Points",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/rewards/points?userId=12345678",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["rewards", "points"],
+          "query": [
+            { "key": "userId", "value": "12345678" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Reward Transactions",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/rewards/transactions?userId=12345678",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["rewards", "transactions"],
+          "query": [
+            { "key": "userId", "value": "12345678" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Reward Options",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/rewards/options?userId=12345678",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["rewards", "options"],
+          "query": [
+            { "key": "userId", "value": "12345678" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Redeem Reward",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"userId\": \"12345678\",\n    \"pointsRedeemed\": \100\\n
+\"rewardType\": \"voucher\"\n }"
+        },
+        "url": {
+          "raw": "http://localhost:3000/rewards/redeem",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["rewards", "redeem"]
+        }
+      }
+    }
+  ]
+}
+
+```
 ## Run tests
 
 ```bash
