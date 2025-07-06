@@ -14,6 +14,33 @@
 
 This is the backend component to handle various endpoints for a reward management database
 
+## Project Structure
+```graphql 
+src/
+├── rewards/
+│   ├── dto/
+│   │   └── redeem-reward.dto.ts        # Request body validation
+│   ├── schemas/
+│   │   ├── user.schema.ts              # User model
+│   │   ├── reward-transaction.schema.ts# Transaction model
+│   │   └── reward-option.schema.ts     # Reward options model
+|   |   └── redemptions_model.ts        # Reward Redemption Model
+│   ├── rewards.controller.ts           # API routes
+│   ├── rewards.service.ts              # Business logic
+│   └── rewards.module.ts               # Rewards module
+├── app.module.ts                       # Root module
+└── main.ts                             # App bootstrap & Swagger setup
+
+```
+## Architecture Overview 
+<ul>Modular Design: Rewards functionality is isolated in a dedicated module</ul>
+<ul>MongoDB Integration: Mongoose schemas for users, transactions, and reward options.</ul>
+<ul>DTO Validation: Request bodies are validated using class-validator.</ul>
+<ul>Service Layer: Handles business logic, including point checking and transaction recording.</ul>
+<ul>Controller Layer: Handles HTTP requests and responses.</ul>
+<ul>Swagger: Auto-generated API docs.</ul>
+<ul>Jest: Handles Unit Tests</ul>
+
 ## Project setup
 
 ```bash
