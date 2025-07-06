@@ -172,6 +172,31 @@ $ mau deploy
 
 With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
 
+## Sample Responses
+ 1. Get /rewards/points?userId=12345678
 
+  ```bash
+    GET /rewards/points?userId=12345678
 
+  ```
+  Response JSON
+  ```json
+  {
+  "rewardPoints": 120
+}
+```
+ 2. Redeem Reward
+  POST /rewards/redeem
+
+  ```json
+    {"userId": "12345678","pointsRedeemed": 100,"rewardType": "voucher"}
+
+  ```
+  Response JSON
+  ```json
+  {
+   "message": "Reward redeemed successfully",
+  "remainingPoints": 70
+}
+```
 
